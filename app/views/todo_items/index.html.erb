@@ -1,0 +1,18 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Todo items</h1>
+
+<div id="todo_items">
+  <% if @todo_list.todo_items.present? %>
+    <ul>
+      <% @todo_list.todo_items.each do |todo_item| %>
+        <li><%= todo_item.description %></li>
+        <%= link_to "Show item", todo_list_todo_item_path(@todo_list, todo_item) %>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No todo items found.</p>
+  <% end %>
+</div>
+
+<%= link_to "New todo item", new_todo_list_todo_item_path(@todo_list) %>

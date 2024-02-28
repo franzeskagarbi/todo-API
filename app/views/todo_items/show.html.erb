@@ -1,0 +1,16 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @todo_item %>
+
+<div>
+ &nbsp &nbsp <%= link_to "Update item", edit_todo_list_todo_item_path(@todo_list, @todo_item) %> 
+  <br>
+ &nbsp &nbsp <%= link_to "Back to todo items", todo_list_todo_items_path(@todo_list) %>
+<br>
+<br>
+  <%= button_to "Delete item", todo_list_todo_item_path(@todo_list, @todo_item),class:'btn btn-primary btn-sm', method: :delete, data: { confirm: "Are you sure?" } %>
+  <br>
+  <br>
+</div>
+
+

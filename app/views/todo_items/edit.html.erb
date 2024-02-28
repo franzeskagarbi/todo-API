@@ -1,0 +1,12 @@
+<h1>Update todo item</h1>
+
+<%= render "form", todo_item: @todo_item %>
+
+<br>
+
+<div>
+<%= link_to "Show this todo item", todo_list_todo_item_path(@todo_list, @todo_item) %>
+<br>
+<%= link_to "Back to todo items", todo_list_todo_items_path(@todo_list) %>
+</div>
+
